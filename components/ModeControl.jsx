@@ -111,44 +111,56 @@ export default function ModeControl({ kipasConfig, updateKipasConfig }) {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center">
                   <Clock size={16} className="mr-1 text-green-500" /> Waktu Nyala
                 </label>
-                <div className="flex space-x-2">
-                  <input
-                    type="number" min="0" max="23"
-                    value={timer?.jam_nyala || 0}
-                    onChange={(e) => handleTimerChange('jam_nyala', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
-                    placeholder="HH"
-                  />
-                  <span className="self-center">:</span>
-                  <input
-                    type="number" min="0" max="59"
-                    value={timer?.menit_nyala || 0}
-                    onChange={(e) => handleTimerChange('menit_nyala', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
-                    placeholder="MM"
-                  />
+                <div className="flex items-end space-x-2">
+                  <div className="flex-1">
+                    <div className="text-xs text-gray-500 dark:text-gray-400 text-center mb-1 font-medium">Jam</div>
+                    <input
+                      type="number" min="0" max="23"
+                      value={timer?.jam_nyala || 0}
+                      onChange={(e) => handleTimerChange('jam_nyala', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white text-center"
+                      placeholder="00"
+                    />
+                  </div>
+                  <span className="text-lg font-bold text-gray-400 dark:text-gray-500 pb-2">:</span>
+                  <div className="flex-1">
+                    <div className="text-xs text-gray-500 dark:text-gray-400 text-center mb-1 font-medium">Menit</div>
+                    <input
+                      type="number" min="0" max="59"
+                      value={timer?.menit_nyala || 0}
+                      onChange={(e) => handleTimerChange('menit_nyala', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white text-center"
+                      placeholder="00"
+                    />
+                  </div>
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 flex items-center">
                   <Clock size={16} className="mr-1 text-red-500" /> Waktu Mati
                 </label>
-                <div className="flex space-x-2">
-                  <input
-                    type="number" min="0" max="23"
-                    value={timer?.jam_mati || 0}
-                    onChange={(e) => handleTimerChange('jam_mati', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
-                    placeholder="HH"
-                  />
-                  <span className="self-center">:</span>
-                  <input
-                    type="number" min="0" max="59"
-                    value={timer?.menit_mati || 0}
-                    onChange={(e) => handleTimerChange('menit_mati', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
-                    placeholder="MM"
-                  />
+                <div className="flex items-end space-x-2">
+                  <div className="flex-1">
+                    <div className="text-xs text-gray-500 dark:text-gray-400 text-center mb-1 font-medium">Jam</div>
+                    <input
+                      type="number" min="0" max="23"
+                      value={timer?.jam_mati || 0}
+                      onChange={(e) => handleTimerChange('jam_mati', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white text-center"
+                      placeholder="00"
+                    />
+                  </div>
+                  <span className="text-lg font-bold text-gray-400 dark:text-gray-500 pb-2">:</span>
+                  <div className="flex-1">
+                    <div className="text-xs text-gray-500 dark:text-gray-400 text-center mb-1 font-medium">Menit</div>
+                    <input
+                      type="number" min="0" max="59"
+                      value={timer?.menit_mati || 0}
+                      onChange={(e) => handleTimerChange('menit_mati', e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-200 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white text-center"
+                      placeholder="00"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
